@@ -1,0 +1,14 @@
+<h1>Welcome to Book Worm!</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Release Date</th>
+  </tr>
+<tr ng-repeat="book in allBooks">
+  <td><a ng-href="/books/{{book._id}}">{{book.title}}</a></td>
+  <td>{{book.author}}</td>
+  <td>{{book.releaseDate}}</td>
+</tr>
+</table>
