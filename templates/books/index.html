@@ -1,14 +1,29 @@
-<h1>Welcome to Book Worm!</h1>
+<div align="center">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Release Date</th>
+  <h1>Welcome to Book Worm!</h1>
+  <button class="btn btn-primary btn-block" ng-click="addBookForm=true">Add a Book</button>
+  <form ng-submit="saveBook()">
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="newBook.title" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="newBook.author" placeholder="Author"> 
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="newBook.image" placeholder="ImageURL">
+    </div>
+    <input type="submit" class="btn btn-primary btn-block">
+  </form>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Release Date</th>
+    </tr>
+  <tr ng-repeat="book in allBooks">
+    <td><a ng-href="/books/{{book._id}}">{{book.title}}</a></td>
+    <td>{{book.author}}</td>
+    <td>{{book.releaseDate}}</td>
   </tr>
-<tr ng-repeat="book in allBooks">
-  <td><a ng-href="/books/{{book._id}}">{{book.title}}</a></td>
-  <td>{{book.author}}</td>
-  <td>{{book.releaseDate}}</td>
-</tr>
-</table>
+  </table>
+</div>

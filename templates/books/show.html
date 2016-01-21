@@ -1,8 +1,22 @@
 <div align="center">
-<h1>Welcome To Book Worm!</h1>
+<h1>Welcome To <a href="/">Book Worm!</a></h1>
  <hr>
  
+ 	<h4>Update Book</h4>
+ 		<form ng-submit="updateBook()">
+ 			<div class="form-group"> 
+ 				<input type="text" class="form-control" ng-model="bookToUpdate.title" placeholder="Title"> 
+ 			</div>
+ 			<div class="form-group"> 
+ 				<input type="text" class="form-control" ng-model="bookToUpdate.author" placeholder="Author"> 
+ 			</div>
+ 			<div class="form-group"> 
+ 				<input type="text" class="form-control" ng-model="bookToUpdate.image" placeholder="Image URL"> 
+ 			</div>
+ 			<input type="submit" class="btn btn-primary btn-block"> 
+ 		</form>
 	<h3><strong>{{book.title}}</strong></h3>
 	<h4>{{book.author}}</h4>
 	<a href="#/books/{{book.id}}" class="thumb"><img ng-src="{{book.image}}" alt="{{book.title}}"></a>
 </div> 
+
